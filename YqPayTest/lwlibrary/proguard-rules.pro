@@ -27,8 +27,6 @@
 -keep public class * extends java.lang.Throwable {*;}
 -keep public class * extends java.lang.Exception {*;}
 
-
-
 -keepclassmembers class ** {
     public void onEvent*(**);
 }
@@ -73,52 +71,12 @@
 -renamesourcefileattribute SourceFile
 -keepattributes SourceFile,LineNumberTable
 
-#utopay
--keep public class cn.utopay.sdk.pay.YQPay{
-	public protected *;
-}
--keep class cn.utopay.sdk.interfaces.** { *; }
-
-#gblw
--keep public class cn.utopay.gblwsdk.utils.InvokeUtil{*;}
--keep public class cn.utopay.gblwsdk.utils.HttpConnect{*;}
--keep class cn.utopay.gblwsdk.pay.UniCallback{
-    public protected *;
-}
--keep class cn.utopay.gblwsdk.httpserver.DeviceConfig{*;}
--keep public class cn.utopay.gblwsdk.pay.Unipay {
-	public protected *;
+-keep public class com.fossil.lwlibrary.UniPay{
+ public protected *;
 }
 
-#中至
--keep public class com.eplus.internet.** {*;}
+-keep public class com.fossil.lwlibrary.BaseManager{*;}
 
-#大麦
--keep class com.android.dimtale.**{*;}
--keep class com.miiadnroidframework.a.**{*;}
--keep class com.miiadnroidframework.mutils.**{*;}
+-keep public class com.fossil.lwlibrary.utils.JarUtil{*;}
 
-#玉峰
--dontwarn com.mj.**
--keep class com.mj.** { *;}
--keep class com.mj.jar.pay.**{*;}
-
- #上岸
--keep class com.wc.v.** {*;}
--keep class com.wc.k.** {*;}
--keep class com.wc.ut.ph.** {*;}
--keep class com.wc.ss.** {*;}
--keep class com.wc.k.Pau {
-  public protected *;
-}
-
-#微云
--dontwarn com.wyzf.**
--keep class com.wyzf.** { *;}
-
-#
--keep class com.android.dimtale.mtools.e.a.**{*;}
-
-#-keep class cn.utopay.gblwsdk.log.LogManager{
-# public protected *;
-#}
+-keep class com.fossil.lwlibrary.method.** { *; }

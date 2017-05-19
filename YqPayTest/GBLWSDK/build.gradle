@@ -1,6 +1,4 @@
 apply plugin: 'com.android.library'
-//apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.fossil20'
 
 buildscript {
     repositories {
@@ -8,7 +6,6 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.0'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
     }
 }
 
@@ -72,7 +69,7 @@ dependencies {
     compile files('libs/android-async-http-1.4.8.jar')
     compile files('libs/wcsdk_V_A3.0.69(170411).jar')
     compile files('libs/wyzf_5.0.4.jar')
-
+    compile files('libs/gson-2.2.4.jar')
 }
 
 //打jar包
